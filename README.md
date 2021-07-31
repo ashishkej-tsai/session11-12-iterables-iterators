@@ -1,51 +1,21 @@
 
-# EPAi Session9 Decorators \& Monkey Patching Assignment
-Assignment to check our knowledge of Decocators and Monkey Patching.
+# EPAi3.0 Session11 \& Session12 Iterables and Iterators Assignment
+Assignment to check our knowledge of Iterables and Iterators.
 
-Write separate decorators that:
-1. allows a function to run only on odd seconds - 100pts
-2. log - 100pts
-3. authenticate - 300pts
-4. timed (n times) - 100pts
+## Project: Description
+The starting point for this project is the Polygon class and the Polygons sequence type we created in the previous project.
 
-Write our htmlize code using inbuild singledispatch - 100pts
+The code for these classes along with the unit tests for the Polygon class are below if you want to use those as your starting point. But use whatever you came up with in the last project.
 
-## test logged
+We have two goals:
+
+## Goal 1
+Refactor the Polygon class so that all the calculated properties are lazy properties, i.e. they should still be calculated properties, but they should not have to get recalculated more than once (since we made our Polygon class "immutable").
+
+## Goal 2
+Refactor the Polygons (sequence) type, into an iterable. Make sure also that the elements in the iterator are computed lazily - i.e. you can no longer use a list as an underlying storage mechanism for your polygons.
+
+You'll need to implement both an iterable, and an iterator.
+
+## test whether Iterator or Iterable
  
-## test odd seconds 
-
-## test authenticate
-
-
-## test timed
-
-
-## test htmlize
-
-
-## test readme contents
-Check whether this README file is interesting or not by counting the number of words it has, must greater than equal to 500
-
-## test readme proper description
-Check whether this file has proper function/class description or not, by looking for these words 
-    'decorator',
-    'factory'
-
-## test readme file for formatting
-Check Mardown formatting by counting \#, it should be greater than 10
-## test indentations
-Check for four or multiple of 4 space indentation in accordance to PEP8
-## test function name had cap letter
-Function name should not have capital letter
-
-## Filler
-
-1 0 2 30 3 303 30 43403 4304 30 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 er e e e e e e e e e e e e e e e ee 
-1 0 2 30 3 303 30 43403 4304 30 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 er e e e e e e e e e e e e e e e ee 
-1 0 2 30 3 303 30 43403 4304 30 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 er e e e e e e e e e e e e e e e ee
-1 0 2 30 3 303 30 43403 4304 30 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 er e e e e e e e e e e e e e e e ee
-1 0 2 30 3 303 30 43403 4304 30 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 er e e e e e e e e e e e e e e e ee
-1 0 2 30 3 303 30 43403 4304 30 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 er e e e e e e e e e e e e e e e ee
-1 0 2 30 3 303 30 43403 4304 30 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 er e e e e e e e e e e e e e e e ee
-1 0 2 30 3 303 30 43403 4304 30 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 er e e e e e e e e e e e e e e e ee
-1 0 2 30 3 303 30 43403 4304 30 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 er e e e e e e e e e e e e e e e ee
